@@ -1,7 +1,7 @@
 function calculardias() {
     let fechainicio=document.getElementById("inicio").values;
     let fechafin=document.getElementById("salida").values;
-    let enviar=document.getElementById("enviar")
+    let enviar=document.getElementById("enviar").values;
     let calculardias = inicio + ":" + salida + ":" + enviar;
 
     if(fechafin>fechainicio){
