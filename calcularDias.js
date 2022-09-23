@@ -1,7 +1,19 @@
 function calculardias() {
-    let fechainicio=document.getElementById("inicio").values;
-    let fechafin=document.getElementById("salida").values;
-    let enviar=document.getElementById("enviar").values;
+    let fechainicio=new Date(document.getElementById("inicio").value);
+    let fechafin=new Date(document.getElementById("salida").value);
+    if (fechainicio>fechafin) {
+        let fecharesultado = fechafin - fechainicio;
+        alert("la cantidad de milisegundos es: " + fecharesultado);
+        let dias = Math.floor((fecharesultado)/(1000*60*60*24))+1;
+        alert(dias);
+    }else{
+        alert("fecha de inicio no puede ser mayor a la fecha de fin");
+        document.getElementById("inicio").value="";
+        document.getElementById("salida").value="";
+    }
+    
+
+   /* let enviar=document.getElementById("enviar").value;
     let calculardias = inicio + ":" + salida + ":" + enviar;
 
     if(fechafin>fechainicio){
@@ -16,5 +28,7 @@ function calculardias() {
     if (calculardias) {
         alert("")
     }
-    
+   */ 
 }
+
+
